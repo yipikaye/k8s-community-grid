@@ -1,0 +1,40 @@
+### Cure Cancer! 
+# 
+### Scale your workers ass appropriate
+# kubectl scale rc community-workers --replicas=X -n community-workers
+# where X = number of worker nodes
+#
+### Set Proxy Settings if necessary by uncommenting the pod lifecycle
+# --set_proxy_settings http_server_name http_server_port http_user_name http_user_passwd socks_server_name socks_server_port socks_version socks5_user_name socks5_user_passwd
+# (all fields are mandatory). Blank; i.e. "", etc. is OK
+###
+
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: community-workers
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: community-workers
+  namespace: community-workers
+spec:
+  replicas: 10
+  selector:
+    name: community-workers
+    version: v1
+  template:
+    metadata:
+      labels:
+        name: community-workers
+        version: v1
+    spec:
+      containers:
+      - image: yipikaye/k8s-community-workers
+        name: community-workers
+ # Update below if you need a proxy server to get to the Internet 
+ #       lifecycle:
+ #        postStart:
+ #         exec:
+ #          command: ["boinccmd", "--set_proxy_settings", "http_server_name", "http_server_port", "", "", "", "", "", "", ""]
