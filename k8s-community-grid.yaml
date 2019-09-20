@@ -31,7 +31,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: yipikaye/k8s-community-workers
+      - image: yipikaye/community-worker
         name: community-workers
  # Update below if you need a proxy server to get to the Internet 
  #       lifecycle:
