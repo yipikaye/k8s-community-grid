@@ -18,3 +18,7 @@ You can still cure cancer!
 ```
 docker pull yipikaye/community-worker
 ```
+
+
+###Thanks for joining the fight###
+
