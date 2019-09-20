@@ -1,4 +1,4 @@
-## File to build docker image for Boinc
+## File to build docker image for World Community Grid
 
 FROM debian:stable
 
