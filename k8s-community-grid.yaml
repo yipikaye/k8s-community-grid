@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - image: yipikaye/community-worker
-        name: community-workers
+        name: community-worker
  # Update below if you need a proxy server to get to the Internet 
  #       lifecycle:
  #        postStart:
