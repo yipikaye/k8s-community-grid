@@ -1,6 +1,6 @@
-### Cure Cancer!
+### Help improve the odds for cancer patients!
 #
-### Scale your workers ass appropriate
+### Scale your workers as appropriate
 # kubectl scale rc community-workers --replicas=X -n community-workers
 # where X = number of worker nodes
 #
