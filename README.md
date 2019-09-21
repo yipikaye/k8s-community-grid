@@ -14,7 +14,7 @@ kubectl apply -f https://raw.githubusercontent.com/yipikaye/k8s-community-grid/m
 ## Docker
 No Kubernetes? Thats OK.
 
-You can still help cancer!
+You can still help cancer patients!
 ```
 docker pull yipikaye/community-worker
 ```
