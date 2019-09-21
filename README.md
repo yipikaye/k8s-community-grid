@@ -6,7 +6,7 @@ This is a simple way to run the World Community Grid on Kubernetes.
 
 This project exists to make it easier to run World Community Grid on cloud deployments to further cancer research.
 
-Helping the fight to cure cancer is as simple as running the following:
+Helping to improve the odds for cancer patients simple as running the following:
 ```
 kubectl apply -f https://raw.githubusercontent.com/yipikaye/k8s-community-grid/master/k8s-community-grid.yaml
 ```
@@ -14,11 +14,14 @@ kubectl apply -f https://raw.githubusercontent.com/yipikaye/k8s-community-grid/m
 ## Docker
 No Kubernetes? Thats OK.
 
-You can still cure cancer!
+You can still help cancer!
 ```
 docker pull yipikaye/community-worker
 ```
 
+Early and accurate detection saves lives.
+
+Power the search for molecular markers that will help researchers detect cancer earlier and design more effective treatments.
 
 ### Thanks for joining the fight
-
+https://www.worldcommunitygrid.org/
