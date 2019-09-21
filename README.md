@@ -21,9 +21,9 @@ You can still help cancer patients!
 docker pull yipikaye/community-worker
 ```
 
+## Thanks for joining the fight
 Early and accurate detection saves lives.
 
 Power the search for molecular markers that will help researchers detect cancer earlier and design more effective treatments.
 
-### Thanks for joining the fight
 https://www.worldcommunitygrid.org/
