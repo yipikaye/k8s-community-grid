@@ -29,3 +29,11 @@ Early and accurate detection saves lives.
 Power the search for molecular markers that will help researchers detect cancer earlier and design more effective treatments.
 
 https://www.worldcommunitygrid.org/
+
+
+## Troubleshooting
+To get logs for all Pods
+
+```
+ kubectl logs -f -l app=k8s-community-grid --all-containers -n community-workers
+```
