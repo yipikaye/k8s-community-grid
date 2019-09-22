@@ -9,7 +9,9 @@ This project exists to make it easier to run World Community Grid on cloud deplo
 Helping to improve the odds for cancer patients simple as running the following:
 ```
 kubectl apply -f https://raw.githubusercontent.com/yipikaye/k8s-community-grid/master/k8s-community-grid.yaml
+kubectl scale deployment community-workers -n community-workers --replicas=X
 ```
+* where X replicas = number of worker nodes or Pods you want to run
 
 ## Docker
 No Kubernetes? Thats OK.
