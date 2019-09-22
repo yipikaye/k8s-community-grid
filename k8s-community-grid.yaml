@@ -56,3 +56,8 @@ spec:
 #         postStart:
 #          exec:
 #           command: ["/usr/bin/boinccmd", "--set_proxy_settings", "http_server_name", "http_server_port", "", "", "", "", "", "", ""]
+# Update below if you wish to use your own project key
+#        lifecycle:
+#         postStart:
+#          exec:
+#           command: ["/usr/bin/boinccmd", "--project_attach", "www.worldcommunitygrid.org", "account_key"]
