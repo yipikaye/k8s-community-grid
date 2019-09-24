@@ -10,8 +10,6 @@
 # (all fields are mandatory). Blank; i.e. "", etc. is OK
 ###
 
-namepsace: community-workers
-
 priorityClassName: community-work
 priorityClassValue: 1
 
