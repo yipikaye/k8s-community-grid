@@ -1,0 +1,6 @@
+To get logs for all Pods
+kubectl logs -f -l app=k8s-community-grid --all-containers -n community-workers
+
+
+kubectl scale deployment community-workers -n community-workers --replicas=X
+where X replicas = number of worker nodes or Pods you want to run
