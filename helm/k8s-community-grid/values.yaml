@@ -1,7 +1,19 @@
 # Default values for k8s-community-grid.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+### Help improve the odds for cancer patients!
+#
+### Scale your workers as appropriate
+# kubectl scale rc community-workers --replicas=X -n community-workers
+# where X = number of worker nodes
+#
+### Set Proxy Settings if necessary by uncommenting the pod lifecycle
+# --set_proxy_settings http_server_name http_server_port http_user_name http_user_passwd socks_server_name socks_server_port socks_version socks5_user_name socks5_user_passwd
+# (all fields are mandatory). Blank; i.e. "", etc. is OK
+###
+
 namepsace: community-workers
+
+priorityClassName: community-work
+priorityClassValue: 1
 
 replicaCount: 10
 
@@ -14,20 +26,15 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-priorityClassName: community-work
-priorityClassValue: 1
-
 resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
+  #   cpu: 4000m
+  #   memory: 4096Mi
   # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+  #   cpu: 200m
+  #   memory: 512Mi
 
 nodeSelector: {}
 

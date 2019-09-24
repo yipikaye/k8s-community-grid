@@ -1,13 +1,4 @@
 ### Help improve the odds for cancer patients!
-#
-### Scale your workers as appropriate
-# kubectl scale rc community-workers --replicas=X -n community-workers
-# where X = number of worker nodes
-#
-### Set Proxy Settings if necessary by uncommenting the pod lifecycle
-# --set_proxy_settings http_server_name http_server_port http_user_name http_user_passwd socks_server_name socks_server_port socks_version socks5_user_name socks5_user_passwd
-# (all fields are mandatory). Blank; i.e. "", etc. is OK
-###
 
 kind: Namespace
 apiVersion: v1
@@ -46,14 +37,6 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
           {{- toYaml .Values.boincconfig | nindent 10 }}
-# Update below if you need a proxy server to get to the Internet
-#        lifecycle:
-#         postStart:
-#          exec:
-#           command: ["/usr/bin/boinccmd", "--set_proxy_settings", "http_server_name", "http_server_port", "", "", "", "", "", "", ""]
-# Update below if you wish to use your own project key
-#        lifecycle:
-#         postStart:
-#          exec:
-#           command: ["/usr/bin/boinccmd", "--project_attach", "www.worldcommunitygrid.org", "account_key"]
