@@ -6,7 +6,7 @@ version: 0.1.0
 description: This is a simple way to run the World Community Grid to further cancer research on Kubernetes.
 keywords:
   - world community grid boinc cancer charity
-home: The URL of this project's home page (optional)
+home: https://github.com/yipikaye/k8s-community-grid
 sources:
   - https://github.com/yipikaye/k8s-community-grid
 maintainers: 
