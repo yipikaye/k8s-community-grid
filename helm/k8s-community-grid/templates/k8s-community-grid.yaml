@@ -13,18 +13,18 @@ metadata:
   name: {{ include "k8s-community-grid.fullname" . }}
   namespace: {{ .Values.namespace }}
   labels:
-      app.kubernetes.io/name: {{ include "k8s-community-grid.name" . }}
+      app: {{ include "k8s-community-grid.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
 spec:
-  replicas: {{ .Values.workers }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "k8s-community-grid.name" . }}
+      app: {{ include "k8s-community-grid.name" . }}}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-      app.kubernetes.io/name: {{ include "k8s-community-grid.name" . }}
+        app: {{ include "k8s-community-grid.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       priorityClassName: {{ .Values.priorityClassName }}

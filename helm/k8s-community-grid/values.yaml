@@ -40,7 +40,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
 boincconfig: {}
 # If you do want to specify a post deployment command, uncomment the following
 # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
