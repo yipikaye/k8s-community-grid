@@ -13,8 +13,7 @@
 priorityClassName: community-work
 priorityClassValue: 1
 
-# Number of PODs doing community work. Probably 1 per node
-workers: 10
+replicaCount: 10
 
 image:
   repository: yipikaye/community-worker

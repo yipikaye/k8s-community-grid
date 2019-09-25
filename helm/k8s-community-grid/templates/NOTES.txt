@@ -1,6 +1,6 @@
 To get logs for all Pods
-kubectl logs -f -l app={{ include "k8s-community-grid.name" . }} --all-containers -n  {{ .Release.Namespace }}
+kubectl logs -f -l app=k8s-community-grid --all-containers -n community-workers
 
 
-kubectl scale deployment {{ include "k8s-community-grid.fullname" . }} -n  {{ .Release.Namespace }} --replicas=X
+kubectl scale deployment community-workers -n community-workers --replicas=X
 where X replicas = number of worker nodes or Pods you want to run
