@@ -19,4 +19,6 @@ ONBUILD VOLUME /data
 
 WORKDIR /data
 
-ENTRYPOINT ["/usr/bin/boinc", "--attach_project", "www.worldcommunitygrid.org", "74bb7c9b222da499033a307a7e5003c8"]
+ENTRYPOINT ["/usr/bin/boinc"]
+
+CMD ["--attach_project", "www.worldcommunitygrid.org", "74bb7c9b222da499033a307a7e5003c8"]
