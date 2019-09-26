@@ -20,7 +20,7 @@ You can still help cancer patients!
 
 [community-worker](https://hub.docker.com/r/yipikaye/community-worker) on Docker Hub.
 ```
-docker pull yipikaye/community-worker
+docker run yipikaye/community-worker
 ```
 
 ## Thanks for joining the fight
