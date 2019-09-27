@@ -37,21 +37,21 @@ Helm chart is provided in helm directory
 helm install k8s-community-grid -n k8s-community-grid --namespace community-workers
 ```
 Optional values you may wish apply with `--set` 
-> limits.cpu=4000m
-> limits.memory=4096m
-> requests.cpu=200m
-> requests.memory=512m
-> project=<BoincProjectURL>
-> accountKey=<yourAccountKey>
-> http_server_name: '""'
-> http_server_port: '""'
-> http_user_name: '""'
-> http_user_passwd: '""'
-> socks_server_name: '""'
-> socks_server_port: '""'
-> socks_version: '""'
-> socks5_user_name: '""'
-> socks5_user_passwd: '""'
+- limits.cpu=4000m
+- limits.memory=4096m
+- requests.cpu=200m
+- requests.memory=512m
+- project=<BoincProjectURL>
+- accountKey=<yourAccountKey>
+- http_server_name: '""'
+- http_server_port: '""'
+- http_user_name: '""'
+- http_user_passwd: '""'
+- socks_server_name: '""'
+- socks_server_port: '""'
+- socks_version: '""'
+- socks5_user_name: '""'
+- socks5_user_passwd: '""'
 
 
 ## Want to do alternative community work?
