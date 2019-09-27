@@ -1,56 +1,31 @@
-# Default values for k8s-community-grid.
-### Help improve the odds for cancer patients!
-#
-### Scale your workers as appropriate
-# kubectl scale rc community-workers --replicas=X -n community-workers
-# where X = number of worker nodes
-#
-### Set Proxy Settings if necessary by uncommenting the pod lifecycle
-# --set_proxy_settings http_server_name http_server_port http_user_name http_user_passwd socks_server_name socks_server_port socks_version socks5_user_name socks5_user_passwd
-# (all fields are mandatory). Blank; i.e. "", etc. is OK
-###
-
 priorityClassName: community-work
 priorityClassValue: 1
 
-replicaCount: 10
-
 image:
   repository: yipikaye/community-worker
+  iname: community-worker
   tag: latest
   pullPolicy: IfNotPresent
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+#Resources
+limits:
+  cpu: 4000m
+  memory: 4096Mi
+requests:
+  cpu: 200m
+  memory: 512Mi
 
-resources: {}
-  # If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 4000m
-  #   memory: 4096Mi
-  # requests:
-  #   cpu: 200m
-  #   memory: 512Mi
+##--attach_project", 
+project: "www.worldcommunitygrid.org"
+accountKey: "74bb7c9b222da499033a307a7e5003c8"
 
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
-boincconfig: {}
-# If you do want to specify a post deployment command, uncomment the following
-# lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-# Update below if you need a proxy server to get to the Internet
-#        lifecycle:
-#         postStart:
-#          exec:
-#           command: ["/usr/bin/boinccmd", "--set_proxy_settings", "http_server_name", "http_server_port", "", "", "", "", "", "", ""]
-
-# Update below if you wish to use your own project key
-#        lifecycle:
-#         postStart:
-#          exec:
-#           command: ["/usr/bin/boinccmd", "--project_attach", "www.worldcommunitygrid.org", "account_key"]
-
+## set_proxy_settings 
+http_server_name: '""'
+http_server_port: '""'
+http_user_name: '""'
+http_user_passwd: '""'
+socks_server_name: '""'
+socks_server_port: '""'
+socks_version: '""'
+socks5_user_name: '""'
+socks5_user_passwd: '""'
