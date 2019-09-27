@@ -23,37 +23,40 @@ globalDefault: false
 description: "This priority class should be used for chairty work only."
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
-  name: community-workers
+  name: k8s-community-grid
   namespace: community-workers
   labels:
     app: k8s-community-grid
 spec:
-  replicas: 10
   selector:
     matchLabels:
-      app: k8s-community-grid
+      name: k8s-community-grid
   template:
-    metadata:
-      labels:
-        app: k8s-community-grid
-    spec:
-      priorityClassName: community-work
-      containers:
-      - image: yipikaye/community-worker
-        name: community-worker
-        #args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key"]
+     metadata:
+       labels:
+         name: k8s-community-grid
+     spec:
+       tolerations:
+       - key: node-role.kubernetes.io/master
+         effect: NoSchedule  
+       terminationGracePeriodSeconds: 30
+       priorityClassName: community-work
+       containers:
+        - image: yipikaye/community-worker
+          name: community-worker
+          #args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key]
 # You probably don't want to consume a whole node if you have other Pods. Uncomment below for min recommended spec and, maximum 2CPU/2000Mib Memory per Pod
-#        resources:
-#          limits:
-#            cpu: 2000m
-#            memory: 2000Mi
-#          requests:
-#            cpu: 200m
-#            memory: 500Mi
+#          resources:
+#            limits:
+#              cpu: 2000m
+#              memory: 2000Mi
+#            requests:
+#              cpu: 200m
+#              memory: 500Mi
 # Update below if you need a proxy server to get to the Internet
-#        lifecycle:
-#         postStart:
-#          exec:
-#           command: ["/usr/bin/boinccmd", "--set_proxy_settings", "http_server_name", "http_server_port", "", "", "", "", "", "", ""]
+#          lifecycle:
+#           postStart:
+#            exec:
+#             command: ["/usr/bin/boinccmd", "--set_proxy_settings", "", "", "", "", "", "", "", "", ""]
