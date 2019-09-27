@@ -46,7 +46,7 @@ spec:
        containers:
         - image: yipikaye/community-worker
           name: community-worker
-          #args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key]
+          #args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key"]
 # You probably don't want to consume a whole node if you have other Pods. Uncomment below for min recommended spec and, maximum 2CPU/2000Mib Memory per Pod
 #          resources:
 #            limits:
