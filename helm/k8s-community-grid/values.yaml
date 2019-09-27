@@ -9,11 +9,11 @@ image:
 
 #Resources
 limits:
-  cpu: 4000m
-  memory: 4096Mi
+  cpu: 
+  memory: 
 requests:
-  cpu: 200m
-  memory: 512Mi
+  cpu: 
+  memory: 
 
 ##--attach_project", 
 project: "www.worldcommunitygrid.org"
