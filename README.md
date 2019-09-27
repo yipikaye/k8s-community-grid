@@ -41,8 +41,8 @@ Optional values you may wish apply with `--set`
 - limits.memory=4096m
 - requests.cpu=200m
 - requests.memory=512m
-- project=<BoincProjectURL>
-- accountKey=<yourAccountKey>
+- project="BoincProjectURL"
+- accountKey="YourAccountKey"
 - http_server_name: '""'
 - http_server_port: '""'
 - http_user_name: '""'
