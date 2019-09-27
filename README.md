@@ -57,7 +57,7 @@ Optional values you may wish apply with `--set`
 ## Want to do alternative community work?
 k8s-community-grid can be used for all boinc projects such as; Rosetta@Home, LHC@Home, Seti@Home etc. 
 
-All you need do is update the following arguments `args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key"]`
+All you need do is use the helm chart or update the following arguments `args: ["-attach_project", "www.worldcommunitygrid.org", "Account_Key"]`
 
 
 ## Thanks for joining the fight
