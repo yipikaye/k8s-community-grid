@@ -1,10 +1,10 @@
 # k8s-community-grid
 
-## Kubernetes Deployment For World Community Grid
+## Kubernetes deployment for boinc community projects
 
-This is a simple way to run the World Community Grid on Kubernetes.
+This is a simple way to run boinc on Kubernetes.
 
-This project exists to make it easier to run World Community Grid on cloud deployments to further cancer research.
+This project exists to make it easier to run World Community Grid on cloud deployments to further cancer research but can be used for any boinc projects.
 
 Helping to improve the odds for cancer patients simple as running the following:
 
